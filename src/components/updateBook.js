@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
+import { withRouter } from 'react-router';
 
-
-export default class UpdateBook extends Component {
+class UpdateBook extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -34,11 +34,11 @@ export default class UpdateBook extends Component {
         })
         .then(response => {return response.json();})
         .then(responseData => {return responseData;})
+        .then(() => { this.props.history.push('/') })
         .catch(err => {console.log("Fetch error: " + err)})
     }
 
     editBook() {
-        {console.log(this.props)}
         this.setState({
             id: this.props.ourProp[0],
             title: this.props.ourProp[1],
@@ -68,3 +68,5 @@ export default class UpdateBook extends Component {
         )
     }
 }
+
+export default withRouter(UpdateBook);
