@@ -16,10 +16,8 @@ export default function(props) {
     }
 
     return (
-        <div>
-            <Link onClick={bookDelete} to={'/deleted_book'} >Delete</Link>
-            
-
+        <div className = "delete-wrapper">
+            <Link onClick={bookDelete} to={'/deleted_book'} className="delete-wrapper-link">Delete</Link>
         </div>
     );
 }

@@ -31,7 +31,7 @@ export default class viewBook extends Component {
 
     render() {
         return (
-            <div className="app">
+            <div className="view-book-wrapper">
                 <h1>Book information</h1>
                 <div>{this.state.singleBook[1]}</div>
                 <div>{this.state.singleBook[2]}</div>

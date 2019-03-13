@@ -1,0 +1,9 @@
+@mixin linkStyles() {
+    color: $blue;
+    
+    &:hover {
+        text-decoration: none;
+        color: $offRed;
+    }
+
+}

@@ -1,0 +1,50 @@
+.list-books-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.book-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    border: 2px solid grey;
+    width: 50vw;
+    height: 80px;
+    .book-list-link-container {
+        display: flex;
+        
+        .delete-link-wrapper {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            height: 80px;
+            
+        }
+
+        .view-book-link-wrapper {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25px;
+
+            .view-book-link {
+                @include linkStyles();
+                font-size: 1.1em;
+               
+            }
+            
+        }
+    }
+}
+
+.title {
+    font-size: 3em;
+    font-family: 'Yrsa', serif;
+    letter-spacing: 1px;
+}
