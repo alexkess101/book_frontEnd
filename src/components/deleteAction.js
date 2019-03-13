@@ -5,7 +5,7 @@ export default function(props) {
 
     function bookDelete() {
         
-        fetch(`http://localhost:5000/delete/${props.id}`, {
+        fetch(`https://ak-micro-sesrv-practice.herokuapp.com/${props.id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
