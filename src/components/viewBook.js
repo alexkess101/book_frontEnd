@@ -15,7 +15,7 @@ export default class viewBook extends Component {
     componentDidMount() {
         const id = this.props.match.params.id;
 
-        fetch(`https://ak-micro-sesrv-practice.herokuapp.com/${id}`, {
+        fetch(`https://alex-kessinger-bookmain.herokuapp.com/${id}`, {
             method: 'GET',
             headers: {
                 "accepts": "application/json",

@@ -23,7 +23,7 @@ export default class addBook extends Component {
     handleSubmit(event) {
         let title = this.state.title;
         let author = this.state.author;
-        fetch("https://ak-micro-sesrv-practice.herokuapp.com/input", {
+        fetch("https://alex-kessinger-bookmain.herokuapp.com/input", {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
