@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import DeleteAction from './deleteAction';
+import UpdateBook from './updateBook';
 
 export default class viewBook extends Component {
     constructor(props) {
@@ -35,7 +36,7 @@ export default class viewBook extends Component {
                 <div>{this.state.singleBook[1]}</div>
                 <div>{this.state.singleBook[2]}</div>
                 <DeleteAction id={this.state.singleBook[0]} />
-                {console.log(this.state.singleBook)}
+                <UpdateBook ourProp={this.state.singleBook} />
             </div>
         )
     }

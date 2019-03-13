@@ -36,6 +36,7 @@ export default class addBook extends Component {
         .catch(error => {
             console.log("Fetch error: " + error);
         })
+        event.preventDefault();
     }
 
     render() {
