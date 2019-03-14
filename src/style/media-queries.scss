@@ -1,0 +1,16 @@
+@media (max-width: 710px) {
+    .navigation-container {
+        position: static;
+        display:flex;
+        justify-content: space-around;
+        margin-left: 0px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .author {
+        font-size: 1.7rem;
+    }
+}
