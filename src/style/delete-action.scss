@@ -3,10 +3,10 @@
     justify-content: center;
     align-items: center;
     width: 25px;
-    .delete-wrapper-link {
-        @include linkStyles();
-        font-size: 1.4em;
-        
-    }
+
+}
+.delete-wrapper-link {
+    @include linkStyles();
+    font-size: 1.4em;
     
 }

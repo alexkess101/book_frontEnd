@@ -25,7 +25,7 @@ class UpdateBook extends Component {
         let title = this.state.title;
         let author = this.state.author;
         
-        fetch(`https://alex-kessinger-bookmain.herokuapp.com/${id}`, {
+        fetch(`http://localhost:5000/update_book/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -50,19 +50,22 @@ class UpdateBook extends Component {
 
     render() {
         return (
-            <div>
+            <div className ="update-book-wrapper">
                 
-                <button onClick={this.editBook}>Update this book</button>
+                <button onClick={this.editBook} className="button update-button">Update this book</button>
                 <form onSubmit={this.handleSubmit} style={{visibility: this.state.formHidden ? "hidden" : "visible"}}>
+                    <label className="form-title">Title</label>
                     <div>
-                        <label htmlFor="">Title</label>
-                        <input type="text" name= "title" value={this.state.title} onChange={this.handleChange}/>
+                        <input type="text" className="text-form" name= "title" value={this.state.title} onChange={this.handleChange}/>
                     </div>
+
+                    <label className="form-title">Author</label>
+
                     <div>
-                        <label htmlFor="">Author</label>                
-                        <input type="text" name="author" value={this.state.author} onChange={this.handleChange}/>
+                        <input type="text" className="text-form" name="author" value={this.state.author} onChange={this.handleChange}/>
                     </div>
-                    <input type="submit" value="submit"/>
+                    <div className="space-20"></div>
+                    <input className ="button" type="submit" value="submit"/>
                 </form>
             </div>
         )

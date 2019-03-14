@@ -12,7 +12,7 @@ export default class BookIndex extends Component {
         }
     }
     componentDidMount() {
-        fetch("https://alex-kessinger-bookmain.herokuapp.com/books", {
+        fetch("http://localhost:5000/books", {
             method: 'GET',
             headers: {
                 "accepts": "application/json",
@@ -28,8 +28,10 @@ export default class BookIndex extends Component {
 
     render() {
         return (
+
+            
             <div className = "list-books-wrapper">
-                <h1>List of Books</h1>
+                <div className="book-list-header header">LIST OF BOOKS</div>
                 
                 {this.state.books.map((book) => (
                     <div key = {book[0]} className="book-container">

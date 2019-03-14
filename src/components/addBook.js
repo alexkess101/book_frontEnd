@@ -23,7 +23,7 @@ export default class addBook extends Component {
     handleSubmit(event) {
         let title = this.state.title;
         let author = this.state.author;
-        fetch("https://alex-kessinger-bookmain.herokuapp.com/input", {
+        fetch("http://localhost:5000/book/input", {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -41,14 +41,27 @@ export default class addBook extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Add book below</h1>
-                <form onSubmit={this.handleSubmit}>
-                    <label> Title</label>
-                    <input type="text" name="title" value= {this.state.title} onChange={this.handleChange} />
-                    <input type="text" name="author" value={this.state.author} onChange={this.handleChange}/>
-                    <input type="submit" value="submit"/>
-                </form>
+            <div className="app">
+                <div className="add-book-container">
+                    <div className="header">ADD BOOK BELOW</div>
+                    <form onSubmit={this.handleSubmit} className ="add-book-form-container">
+                        <label className="form-title">Title</label>
+                        <div>
+                            <input type="text" name="title" value= {this.state.title} onChange={this.handleChange} className="text-form" />
+                        </div>
+                        
+                        <label className ="form-title">Author</label>
+
+                        <div>
+                            <input type="text" name="author" value={this.state.author} onChange={this.handleChange} className="text-form"/>
+                        </div>
+
+                        <div className="space-20"></div>
+                        <div className="button-wrapper">
+                            <input type="submit" value="Submit" className="button"/>
+                        </div>
+                    </form>
+                </div>
             </div>
         )
     }

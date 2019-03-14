@@ -5,10 +5,12 @@ export default function() {
 
 
     return (
-        <div>
-            <h1>You deleted a book</h1>
+        <div className="app delete-landing-container">
+            <div className="header">You deleted a book</div>
 
-            <Link to={'/'}>View All Books</Link>
+            <div className="delete-landing-link-wrapper">
+                <Link to={'/'} className ="delete-wrapper-link">View All Books</Link>
+            </div>
             
 
         </div>

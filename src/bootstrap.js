@@ -19,10 +19,10 @@ function main() {
   ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
       <BrowserRouter>
-        <div>
-          <div className="nav">
-            <NavLink exact to="/">Home</NavLink>
-            <NavLink to="/add_book">Add Book</NavLink>
+        <div className="navigation-wrapper">
+          <div className="navigation-container">
+            <NavLink exact to="/" className="navigation-home link">Home</NavLink>
+            <NavLink to="/add_book" className="navigation-add-book link">Add Book</NavLink>
 
           </div>
           <div>

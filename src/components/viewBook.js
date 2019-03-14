@@ -15,7 +15,7 @@ export default class viewBook extends Component {
     componentDidMount() {
         const id = this.props.match.params.id;
 
-        fetch(`https://alex-kessinger-bookmain.herokuapp.com/${id}`, {
+        fetch(`http://localhost:5000/book/${id}`, {
             method: 'GET',
             headers: {
                 "accepts": "application/json",
@@ -32,11 +32,19 @@ export default class viewBook extends Component {
     render() {
         return (
             <div className="view-book-wrapper">
-                <h1>Book information</h1>
-                <div>{this.state.singleBook[1]}</div>
-                <div>{this.state.singleBook[2]}</div>
-                <DeleteAction id={this.state.singleBook[0]} />
-                <UpdateBook ourProp={this.state.singleBook} />
+            <div className="header">Book information</div>
+                <div className="view-book-container">
+                    <div className="left-side">
+                        <div className="title">{this.state.singleBook[1]}</div>
+                        <div className ="title">By: {this.state.singleBook[2]}</div>
+                        <div>
+                            <UpdateBook ourProp={this.state.singleBook}/>
+                        </div>
+                    </div>
+                    <div className="right-side">
+                        <DeleteAction id={this.state.singleBook[0]}/>
+                    </div>
+                </div>
             </div>
         )
     }
