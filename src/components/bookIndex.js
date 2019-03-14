@@ -12,7 +12,7 @@ export default class BookIndex extends Component {
         }
     }
     componentDidMount() {
-        fetch("http://localhost:5000/books", {
+        fetch("https://alex-kessinger-bookmain.herokuapp.com/books", {
             method: 'GET',
             headers: {
                 "accepts": "application/json",

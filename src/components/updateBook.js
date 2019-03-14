@@ -25,7 +25,7 @@ class UpdateBook extends Component {
         let title = this.state.title;
         let author = this.state.author;
         
-        fetch(`http://localhost:5000/update_book/${id}`, {
+        fetch(`https://alex-kessinger-bookmain.herokuapp.com/update_book/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
