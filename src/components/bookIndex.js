@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import DeleteAction from './deleteAction';
 import { Link } from 'react-router-dom';
+import LoadingOverlay from 'react-loading-overlay';
 
 
 export default class BookIndex extends Component {
