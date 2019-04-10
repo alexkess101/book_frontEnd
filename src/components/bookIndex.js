@@ -8,7 +8,8 @@ export default class BookIndex extends Component {
         super(props);
     
         this.state = {
-            books: []
+            books: [],
+            isLoaded: true
         }
     }
     componentDidMount() {
@@ -20,7 +21,13 @@ export default class BookIndex extends Component {
             }
         })
         .then(response => {return response.json();})
-        .then(data => {this.setState({books: data});})
+        .then(data => {
+            this.setState({
+                books: data,
+                isLoaded: false
+            });
+            
+        })
         .catch(error => {
             console.log("Fetch error: " + error);
         })
@@ -31,6 +38,12 @@ export default class BookIndex extends Component {
 
             
             <div className = "list-books-wrapper">
+                <LoadingOverlay
+                    active={this.state.isLoaded}
+                    spinner
+                    text="Loading..."
+                    fadeSpeed={200}
+                >
                 <div className="book-list-header header">LIST OF BOOKS</div>
                 
                 {this.state.books.map((book) => (
@@ -54,6 +67,7 @@ export default class BookIndex extends Component {
                         </div>
                     </div>
                 ))}
+                </LoadingOverlay>
             </div>
         )
     }
