@@ -14,7 +14,7 @@
     padding-left: 15px;
     margin-bottom: 20px;
     border: 2px solid grey;
-    width: 50vw;
+    width: 100%;
     height: 80px;
     .book-list-link-container {
         display: flex;
@@ -53,5 +53,12 @@
 .author {
     font-size: 2em;
     font-family: $bookFont;
+    
+}
+
+.loader-bar {
+    width: 100%;
+    height: 100vh;
+    align-items: center;
     
 }

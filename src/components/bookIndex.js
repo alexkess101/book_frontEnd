@@ -36,17 +36,18 @@ export default class BookIndex extends Component {
 
     render() {
         return (
-
+                
             
             <div className = "list-books-wrapper">
+                
+                <div className="book-list-header header">LIST OF BOOKS</div>
                 <LoadingOverlay
                     active={this.state.isLoaded}
                     spinner
                     text="Loading..."
                     fadeSpeed={200}
+                    className='loader-bar'
                 >
-                <div className="book-list-header header">LIST OF BOOKS</div>
-                
                 {this.state.books.map((book) => (
                     <div key = {book[0]} className="book-container">
                         <div className="book-title-container">
@@ -70,6 +71,8 @@ export default class BookIndex extends Component {
                 ))}
                 </LoadingOverlay>
             </div>
+                
+            
         )
     }
 }
